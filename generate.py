@@ -26,7 +26,7 @@ for batch_id, batch in enumerate(batches(inset, batch_size)):
     for cid, text in batch:
         form += render('_generate_form', {'clip_id': cid, 'text': text})
     fp = open('render/generate/generate.%s.%s.html' % (question_id, batch_id), 'w')
-    print >> fp, render('generate', {'question': question(102), 'form': form})
+    print >> fp, render('generate', {'question': question(question_id), 'form': form})
     fp.close()
     
 inset = map(itemgetter(0), inset)
