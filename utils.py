@@ -9,7 +9,10 @@ def dataset(qid):
     return open('dataset/%s.tsv' % qid)
 
 Q = {
-        102: 'How do I unclog my bathrub?'
+        96: 'What does a planet need to support life?',
+        102: 'How do I unclog my bathtub?'
+        115: 'How do I get my tomato plants to grow more tomatoes?',
+        116: 'What are the best day trips possible from Barcelona, Spain?',
 }
 def question(qid):
     return Q[qid]
